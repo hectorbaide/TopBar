@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PinApp</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">  
+                
+                <link rel="stylesheet" href="stil.css">
+                <link href='http://fonts.googleapis.com/css?family=Quantico:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+                <link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+                <script src="jquery-2.1.0.min.js"></script>
+
+
+
+    </head>
+    
+<body>
+    <div id="topbar">
+
+       <div class="logo">
+            <h2 class="titleLogo">PINAPP</h2>
+        </div>
+
+        <div class="profile">
+        </div>
+        
+        <div class="search">
+        </div>
+
+        <div class="middle">
+                <form class="formal">
+                    <input class="klaas" type="text" placeholder="Search here..." required>
+                </form>   
+        </div>
+
+    </div> 
+
+    <div class="loading"></div> 
+    <div class="infobar">
+        <div class="titles">
+            <!-- <img class="topImg" width="40px" src="logo.png"> -->
+            <h2 class="toptext">Trending Apps</h2>
+        </div>
+    </div>
+
+     
+</body>
+    
+<script type="text/javascript">
+    
+    $('.formal').hide();
+
+    $('.search').mousedown(function () {
+        // body...
+        conditionalNameHide();
+        $('.formal').fadeToggle(150);
+        
+    });
+
+    $('.search').mousedown(function () {
+        // body...
+        $(this).toggleClass("on");
+    })
+
+
+function conditionalNameHide () {
+    // body...
+    var X = innerWidth;
+
+    if (X < 500) {
+
+        $('h2').fadeToggle(200);
+        // $('.search').toggle();
+
+    };
+}
+
+function loading () {
+
+for (var counter = 9; counter >= 0; counter--) {
+    
+    $('.loading').fadeToggle(750);
+    counter = counter - 1;
+};}
+
+loading();
+    
+   
+    
+        
+     
+
+        
+    
+
+</script>
+ 
+</html>
